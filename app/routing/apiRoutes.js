@@ -1,6 +1,9 @@
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
-});
 
-app.listen(8080);
+
+function apiRoutes (app){
+    
+            app.get('/survey', function(req, res) {
+               res.sendFile(PATH.join(__dirname + './../data/survey.html'));
+            });
+        }
 module.exports = apiRoutes;
