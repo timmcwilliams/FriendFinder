@@ -6,17 +6,17 @@ const PATH = require('path');
 const PORT = process.env.PORT || 3000; 
 const APP = EXPRESS();
 
-// BodyParser makes it possible for our server to interpret data sent to it.
+// BodyParser
 APP.use(BODYPARSER.json());
 APP.use(BODYPARSER.urlencoded({ extended: true }));
 APP.use(BODYPARSER.text());
 APP.use(BODYPARSER.json({ type: "application/vnd.api+json" }));
 
-//path to serve static files.
-// *NOTE: May need to change to your folder if different.
+//path to serve  files.
+
 APP.use(EXPRESS.static(PATH.join(__dirname, '/app')));
 
-// ROUTER - Below points our server to a series of "route" files.
+// ROUTER server to  "route" files.
  
 require("./app/routing/apiRoutes.js")(APP);
 require("./app/routing/htmlRoutes.js")(APP);

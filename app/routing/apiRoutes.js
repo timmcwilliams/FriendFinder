@@ -1,5 +1,5 @@
 
-
+const PATH = require('path');
 function apiRoutes (app){
     
             app.get('/survey', function(req, res) {
