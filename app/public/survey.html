@@ -147,7 +147,7 @@
       <hr>
       <footer class="footer">
         <div class="container">
-          <p><a href="../data/friends.js">API Friends List</a> | <a href="https://github.com/timmcwilliams/FriendFinder">GitHub Repo</a></p>
+          <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/timmcwilliams/FriendFinder">GitHub Repo</a></p>
         </div>
       </footer>
   
@@ -201,7 +201,7 @@
       $("#submit").on("click", function(event) {
         event.preventDefault();
   
-        // Form validation
+        // // Form validation
         // function validateForm() {
         //   var isValid = true;
         //   $(".form-control").each(function() {
@@ -238,7 +238,7 @@
         //       $("#q10").val()
         //     ]
         //   };
-          var userData = {name: "tim", age: "old"};
+   var userData = {name: "tim", age: "old"};
           // AJAX post the data to the friends API.
           $.post("/api/friends", userData, function(data) {
   
@@ -250,8 +250,8 @@
             $("#results-modal").modal("toggle");
   
           });
-        // } else {
-        //   alert("Please fill out all fields before submitting!");
-        // }
+         /*else {
+          alert("Please fill out all fields before submitting!");
+        }*/
       });
     </script>

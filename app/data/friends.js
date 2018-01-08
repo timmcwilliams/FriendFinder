@@ -1,4 +1,5 @@
- [
+
+var userData = [
 {
 "name": "Bridget",
 "photo": "https://photos.app.goo.gl/sn4p5UcXByN5BdS83",
@@ -432,3 +433,4 @@
 ]
 }
 ]
+module.exports = userData;

@@ -6,11 +6,13 @@ const PATH = require('path');
 const PORT = process.env.PORT || 3000; 
 const APP = EXPRESS();
 
+
 // BodyParser
 APP.use(BODYPARSER.json());
 APP.use(BODYPARSER.urlencoded({ extended: true }));
 APP.use(BODYPARSER.text());
 APP.use(BODYPARSER.json({ type: "application/vnd.api+json" }));
+// app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
 
 //path to serve  files.
 
